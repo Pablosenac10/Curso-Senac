@@ -6,7 +6,7 @@
     <title>While versao 3</title>
 </head>
 <body>
-    
+   
 <script>
 /*
 var nota;
@@ -19,10 +19,8 @@ do{
 }while(nota2 < 0 || nota2 > 10);
 var media = (parseInt(nota) + parseInt(nota2)) / 2;
     alert('Sua média foi: ' + media);
-*/
-    // testando github 
 
-
+    //  
    
     do{
         var usuario = prompt('Usuário:');
@@ -34,7 +32,55 @@ var media = (parseInt(nota) + parseInt(nota2)) / 2;
             alert('Senha incorreta!');
         }
     }while( usuario != 'senac' || senha != '1234');
+  
+
+do{
+        var conta = prompt('Digite o número conta:');
+        var senha = prompt('Digite sua Senha:');
+        if(conta != 'Senac'){
+            alert('conta não encontrada!');
+        }
+        else if(senha != '4321'){
+            alert('Senha incorreta!');
+        }
+    }while( conta != 'Senac' || senha != '4321');
+    alert('Login efetuado com sucesso! \nEntrando na sua conta.');
     
+    var botao = document.getElementById("botao");
+    botao.addEventListener("click", () =>{
+    do{
+        var saque;
+    }while( saque <= 1)
+    var dinheiro = Math.floor(Math.random () * (1000 - 0 + 1)) + 1;
+    if(dinheiro != 0){
+        var saque2 = prompt('Digite quanto quer sacar');
+    }
+    if(saque2 >= 500){
+    alert('Você nao pode sacar este valor!');}
+    })
+
+*/
+// criar um sistema que verifica se a pessoa tem saldo para realizar um saque
+// explicação professor
+// if(verificação != "1")
+// alert('Seu saldo é de: ' + saldo)
+
+
+var permanecer;
+var saldo = Math.floor(Math.random () * (1000 - 1 + 1)) + 1;
+
+do{
+var verificaçao = prompt('Escolha uma das 3 opções abaixo: \n1. Saldo. \n2.Saque. \n3.Deposito.');
+}while(verificaçao > 3 || verificaçao < 0);
+do{
+    alert('Seu saldo é de: ' + saldo)
+    var saque = prompt('Digite o valor do saque')
+    if(saque > saldo){
+        alert('saldo insuficiente')
+    
+}while(saque > saldo);
+permanecer = confirm('Deseja fazer outra operação?');
+}while(permanecer == true)
 
 
 
