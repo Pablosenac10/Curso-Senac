@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comando IF</title>
+</head>
+<body>
+    <script>
+/*
+        var idade = prompt('Digitie sua idade:');
+        if(idade >= 18) {
+            alert('Você é maior de idade!');
+        }
+        if(idade < 18){
+            if(idade < 0){
+            alert('Idade invalidada!')
+            }
+            if(idade > 0){
+            alert('Você é menor de idade.');
+            }
+        }
+*/
+
+var n1 = prompt('Digite aqui a primeiro nota:');
+var n2 = prompt('Digite aqui a segundo nota:');
+var media = (parseInt(n1) + parseInt(n2))/3;
+
+if(media >= 7){
+    alert('Você conseguiu passar!')
+}
+if(media < 7){
+    alert('Esta de Recuperação.')
+}
+
+
+
+
+/*
+
+        alert('IMPORTANTE: \n Se suas parcelas forem maior que 5 será necessario aplicação de juros!');
+var parcelas = prompt('Digite a quantidade de parcelas:');
+if(parcelas > 3){
+    var valor = prompt('Valor da parcela:');
+    var juros = valor * 0.5 * parcelas
+    var comJuros = juros + parseInt(valor)
+    alert('O valor da parcela passara a ser de: ' + comJuros);
+        }
+if(parcelas <= 3){
+    alert('Você não terá juros!');
+}
+    */ 
+    
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novas atividades com While</title>
+</head>
+<body>
+
+<script>
+
+/* Sair == false se torna a cabeça do repetidor, até chegar no confirm('texto') onde ele vai ser o interruptor de tudo
+
+var sair = false;
+
+while( sair == false){
+    var n1 = prompt('Digite o 1º número:');
+    var n2 = prompt('Digite o 2º número:');
+
+    var total = parseInt(n1) + parseInt(n2);
+
+    alert('Total = ' + total);
+
+    sair = confirm('Deseja finalizar o sistema?');
+}
+*/
+
+
+/* Desenvolver um sistema que gere um número aleatorio entre 1 e 10
+// O usuário tentará uma chance de acertar, depois será gerado outro entra 1 e 10
+
+var acertou = false;
+
+while( acertou == false){
+    // Função: Math.floor(Math.random() * (numMaximo - numMinimo + 1<--'o unico numero fixo')) + numMinimo novamentematsh
+    // Math.floor     = arredonda pra baixo
+    // Math.random () = gera um numero aleatório (0 e 1)
+    var numAleatorio = Math.floor(Math.random() * (10 - 1 + 1)) + 1;
+    var numero = prompt('Digite um número de 1 a 10:');
+    
+    if(numero == numAleatorio){
+        alert('Você acertou!');
+        acertou = true;
+    }
+    
+    else{
+        alert(' Você errou. O numero aleatório era: ' + numAleatorio);
+    }
+}
+
+// criar as variaves que diz respeito a contagem
+var cont = 1;
+var contMenor50 = 0;
+var contMaior50 = 0;
+// criar um contador que vai gerar os numeros pedidos
+while( cont <= 100){
+
+    var numAleatorio = Math.floor(Math.random () * (100 - 1 + 1)) + 1;
+// a partir disso criar as condiçoes junto com limitadores 
+if( numAleatorio <= 50){
+    // enquanto o numero for menor que 50 ele entra dentro desse contador
+   contMenor50++
+}
+else{
+    contMaior50++;
+}
+cont++;
+}
+// alert colocado fora para nao se repetir toda vez que ele fizer a volta
+alert('Quantidade de números menores de 50: ' + contMenor50 +
+    '. \n Quantidade de números maiores que 50: ' + contMaior50
+)
+
+
+var cont = 1;
+var candidato2 = 0;
+var candidato3 = 0;
+
+while( cont <= 51){
+    var numVotos = Math.floor(Math.random () * (3 - 2 + 1)) + 2;
+if(numVotos == 2){
+candidato2++
+}
+if(numVotos == 3){
+candidato3++
+}
+cont++;
+}
+alert('A quantidade de votos para o candidato 2 é: ' + candidato2 + '. \n A quantidade de votos para o candidato 3 é: ' + candidato3);
+if( candidato2 > candidato3){
+    alert('O candidato 2 ganhou!');
+}
+else{
+    alert('O candidato 3 ganhou!');
+}
+*/
+</script>
+    
+</body>
+</html>

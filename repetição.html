@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>While</title>
+</head>
+<body>
+    <p id="texto"></p>
+<script>
+/*
+// inicialização
+var i = 1;
+// condição
+while(i <= 3){
+    alert('i = ' + i);
+    // incremento
+    i++;
+}
+
+
+var stop = prompt('Digite onde você quer parar:')
+var i = 1;
+
+while(i <= stop){
+    alert('Sua contagem é: ' + i);
+    i++;
+}
+
+*/
+var p = document.getElementById('texto');
+var i = prompt('Digite qual numero vai iniciar');
+var stop = prompt('Digite onde você quer parar:');
+
+while(i <= stop){
+    //  += pode significar tanto concatenar como somar com o proximo apos o sinal de igual
+    // (p.innerHTML += + i)
+    p.innerHTML = p.innerHTML + i + ' ';
+    i++;
+}
+</script>
+</body>
+</html>

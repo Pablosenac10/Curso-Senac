@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirm e True</title>
+</head>
+<body>
+    <script>
+/* confirm = exibe uma caixa de confirmação
+// boolean = true (verdadeiro) ou false (falso)
+
+var resposta = confirm('Você é um Robô?');
+
+if(resposta == true){
+    alert('Bem-Vindo!');
+}
+else{
+    alert('Acesso negado!');
+}
+*/
+
+var q1 = confirm('Conhecia a vítima?');
+var q2 = confirm('Mora perto da vítima?');
+var q3 = confirm('Já trabalhou com a vítima?');
+var q4 = confirm('Já ligou pra vítima?');
+var q5 = confirm('Devia a vítima?');
+var cont = 0;
+// cont++ -> cont = cont + 1
+
+if(q1 == true){ cont++; }
+if(q2 == true){ cont++; }
+if(q3 == true){ cont++; }
+if(q4 == true){ cont++; }
+if(q5 == true){ cont++; }
+
+if(cont < 2){
+    alert('Inocente')
+}
+if(cont == 2){
+    alert('Suspeito')
+}
+if(cont == 3 || cont == 4){
+    alert('Cúmplice')
+}
+if(cont == 5){
+    alert('ASSASSINO!')
+} 
+ </script>
+</body>
+</html>

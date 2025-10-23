@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delta
+    </title>
+
+    <style> 
+        #delta {
+      position: absolute; /* Necessário para manipular a posição */
+      top: 300px;
+      left: 600px;
+        
+        }
+            
+    </style>
+</head>
+<body>
+    <button id = 'delta'> Calcular Bhaskara</button>
+    <script>
+// calcular o delta: Delta = b^2 - 4 * a * c;
+
+var botao = document.getElementById('delta');
+    botao.addEventListener('click', () => {
+
+        
+    var a = prompt('Digite aqui o valor de A:');
+    var b = prompt('Digite o valor de B:');
+    var c = prompt('Digite aqui o valor de C:');
+    var delta = b**2 - 4 * a * c;
+
+    alert('O valor de delta é: ' + delta);
+// descobrir se existe raiz
+// se existir se é uma ou duas raízes
+// quais os valores das raízes
+
+if(delta > 0){
+var x1 = (-b + Math.sqrt(delta))/(2 * a);  
+var x2 = (-b - Math.sqrt(delta))/(2 * a);  
+
+alert('Sua variavel 1 é de: ' + x1 + '\n Sua variavel 2 é de: ' + x2
+);
+
+}
+
+if(delta < 0){
+    alert('Raíz nao existe');
+}
+if(delta == 0){
+    var x3 = -b/2 * a
+    alert('Sua unica raíz é igual a:' + x3);
+}
+
+delta.style.top = `${80}px`;
+      delta.style.left = `${50}px`
+
+      document.getElementById('delta').style.backgroundColor = "blue";
+});
+
+
+
+// aumentar tamanho do botão e texto
+botao.style.width = '400px'; // Largura
+botao.style.height = '100px'; // Altura
+botao.style.fontSize = '40px'; // Tamanho do texto
+
+    </script>
+
+
+    
+</body>
+</html>

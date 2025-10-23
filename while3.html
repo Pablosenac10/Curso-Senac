@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ptBR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>While versao 3</title>
+</head>
+<body>
+    
+<script>
+
+var nota;
+var nota2;
+do{
+    nota = prompt('Digite a nota da prova 1:');
+}while(nota < 0 || nota > 10);
+do{
+    nota2 = prompt('Digite a nota da prova 2:');
+}while(nota2 < 0 || nota2 > 10);
+var media = (parseInt(nota) + parseInt(nota2))/2
+    alert('Sua média foi: ' + media)
+
+</script>
+
+</body>
+</html>
