@@ -27,15 +27,22 @@ if(verificaçao == '1'){
         alert('saldo insuficiente');}   
     }while(saque > saldo);
     
-    var saldo2 = parseInt(saldo) - parseInt(saque)
+    saldo -= saque;
     // tambem pode ser usado essa formula --> (saldo -= saque)
-    alert('Seu saldo agora é de:' + saldo2);
+    alert('Seu saldo agora é de:' + saldo);
 }
 
     if(verificaçao == '3'){
-    var deposito = prompt('Digite o valor do deposito:');
-    var bonus = parseInt(saldo) + parseInt(deposito);
-    alert('Seu novo saldo é:' + bonus)}
+        do{
+    var deposito = prompt('Digite o valor do deposito: ');
+    if(deposito <= 0 ){
+        alert('Valor inválido');
+    }
+        }while(deposito <= 0);
+        // tambem pode ser usado essa formula --> (saldo += deposito)
+         saldo += parseInt(deposito);
+        alert('Seu novo saldo é: ' + saldo);    
+}
 
 permanecer = confirm('Deseja fazer outra operação?');
 }while(permanecer == true);
