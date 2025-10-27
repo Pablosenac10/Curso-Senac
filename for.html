@@ -8,13 +8,16 @@
  
 <body>
      <p id="texto"></p>
+     <style> 
+        
+     </style>
 <script>
     /*
     var p = document.getElementById('texto')
 // For ( Inicialização; Condição; Incremento)
 
 var fim = prompt('Defina o limite da contagem: ');
-for(var cont = 1; cont <= fim; cont++);
+for(var cont = 1; cont <= fim; cont++)
 
 p.innerHTML += cont + ' ';
 
@@ -34,7 +37,7 @@ var preco = 0;
 for(var cont = 1; cont <= 3; cont++)
     preco += parseFloat(prompt('Digite o ' + cont 'º prço do produto:'));
     alert('Total: ' + preco);
-    */
+    
 
 var placar = 0;
 for(var cont = 1; cont <= 3; cont++){
@@ -46,12 +49,25 @@ for(var cont = 1; cont <= 3; cont++){
     else if(jogos == 'empate'){
  placar += 1
     }
-    else{
-        placar += 0
-    }
+    
 }
 alert('Seu time ficou com ' + placar + ' pontos');
 
+var p = document.getElementById('texto')
+for(var cont = 10; cont >= 1; cont--)
+    p.innerHTML += cont + ' ';
+*/
+var linhas = prompt('Digite o numero de Linhas:')
+// var colunas = prompt('Digite o numero de Colunas:')
+var texto = '';
+for(var l = 1; l <= linhas; l++){
+    for(var c = 1; c <= l; c++){
+        texto += ' * '
+    }
+    texto += '<br>'
+}
+var p = document.getElementById('texto')
+    p.innerHTML += texto;
 
 </script>
 
