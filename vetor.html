@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vetor e Array</title>
+</head>
+<body>
+
+    <script>
+/*
+// var com valores pré-definido
+// as posições sao definidas pela ordem e iniciam do [0]: [0, 1, 2, 3, ...]
+var preco = [10, 25, 30];
+        alert(preco[2]);
+// inserir um valor com (.push)
+preco.push(50);
+alert(preco[3]);
+// alterar um valor
+preco[2] = 60;
+alert(preco[2]);
+*/
+
+var permanecer;
+// declara um vetor vazio
+var nomes = [];
+var notas = [];
+var situacao = [];
+var cont = 0;
+do{
+// sem o '=' por que o vetor inicia do [0]
+for(var i = 0; i < 4; i++){
+// notas.push(prompt('Digite uma nota:'));
+// outra forma de inserir um vetor;
+nomes[i] = prompt('Digite o nome do aluno: ')
+notas[i] = parseFloat(prompt('Digite uma nota:'));
+}
+for(var i = 0; i < 4; i++){
+if( notas[i] >= 6){
+    cont++; 
+    situacao[i] = 'aprovado(a)'
+}
+else{
+    situacao[i] = 'reprovado(a)'
+}
+alert(nomes[i] + ' possui nota ' + notas[i] + ' e está ' + situacao[i])
+}
+permanecer = confirm('Deseja retornar do inicio?');
+}while(permanecer == true);
+
+
+
+// else if( notas[i] < 6){
+    // alert( passaram + ' vão repetir!');}
+// alert(nomes[i] + ' possui nota ' + notas[i])
+// soma += notas[i];
+// var media = soma /4;
+// alert('Sua media final é: ' + media);
+// for(var i = 0; i < 4; i++){
+    // alert(notas[i]);
+    </script>
+    
+</body>
+</html>
