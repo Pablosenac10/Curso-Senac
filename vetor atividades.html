@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividades de Vetor</title>
+</head>
+<body>
+
+    <script>
+        /*
+var permanecer;
+var celsius = [];
+var fahrenheit = [];
+// Fº = (C * 1.8) + 32
+// Math.floor(Math.random () * 40 - 1 + 1) + 1
+do{
+for(var i = 0; i < 4; i++){
+    celsius[i] = Math.floor(Math.random () * (40 - (-10) + 1)) + (-10);
+   
+}
+for(var i = 0; i < 4; i++){
+    fahrenheit[i] = (celsius[i] * 1.8) + 32;
+    alert('O Celsius será: ' + celsius[i].toFixed(1) + '° ' + '\nEm Fahrenheit será: ' + fahrenheit[i].toFixed(1) + '°');
+}
+
+permanecer = confirm('Deseja repetir?')
+}while(permanecer == true)
+
+
+var permanecer;
+var valores = [];
+var maior = 0;
+do{
+for(var i = 0; i < 10; i++){
+    valores[i] = Math.floor(Math.random () * (100 - 1 + 1)) + 1; 
+if(valores[i] > maior){
+    maior = valores[i]};
+}
+alert(valores)
+alert('O maior valor é: ' + maior);
+permanecer = confirm('Retornar do inicio?')
+}while(permanecer == true)
+*/
+
+var permanecer;
+var limite  = [];
+var compra  = [];
+var estado  = [];
+var titular = [];
+var fraude  = []; 
+// status ^
+do{
+
+for(var i = 0; i < 10; i++){
+    limite[i] = Math.floor(Math.random () * (10000 - 3000 + 1)) + 3000;
+    compra[i] = Math.floor(Math.random () * (5000 - 100 + 1)) + 100;
+    estado[i] = Math.floor(Math.random () * (1 - 0 + 1)) + 0;
+    titular[i] = Math.floor(Math.random () * (1 - 0 + 1)) + 0;
+}
+var criterio = 0;
+var contFraud = 0;
+for(var i = 0; i < 10; i++){
+    if(compra[i] >= limite[i]/2){
+        criterio++;
+        // fraude[i] = 'Fraude!!';
+}
+    if(estado[i] == 0){
+        criterio++
+    }
+    if(titular[i] == 0){
+        criterio++
+    }
+    if(criterio >= 2){
+        fraude[i] = 'Fraude!'
+        // aproveitando é so adicionar uma variavel
+        contFraud++;
+    }
+    else{
+        fraude[i] = 'Normal.'
+    }
+    // necessario resetar o criterio para nao ir somando
+    criterio = 0;
+    
+alert('Valor da compra: ' + compra[i] + '\nSeu limite: ' + limite[i] + '\nEstado: ' + estado[i] + '\nRealizou a compra: ' + titular[i] + '\nO cartão deu: ' + fraude[i])
+}
+permanecer = confirm('Foram um total de ' + ((contFraud/10) * 100)+ ' % de fraude.')    
+}while( permanecer == true)
+// alert('São um total de ' + porcentagem + ' % de fraude.')
+    </script>
+    
+</body>
+</html>
