@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrizes</title>
+</head>
+
+<body>
+    <style>
+
+#texto {
+        font-size: 24px;
+}
+
+    </style>
+    <p id="texto"></p>
+    <script>
+        
+        /*
+// vetor/array bidimensional ou simplismente MATRIZ
+// declara uma matriz de 3x3
+var matriz = [
+    [1,2,3],
+    [4,5,6],
+    [7,8,9]
+];
+// exibir valores
+alert(matriz[1][2]);
+// alteração de valores
+matriz[1][1] = 10;
+alert(matriz[1][1]);
+
+var p = document.getElementById('texto')
+var matriz = [[],[],[]];
+var cont = 1;
+// var texto = ''
+// tradicionalmente se usa ij em vez de lc
+for(l = 0; l < 3; l++){
+    for(c = 0; c < 3; c++){
+    matriz[l][c] = Math.floor(Math.random () * 50 - 1 + 1) + 1;
+        cont++;
+        // texto += matriz[l][c] + ' ';
+        p.innerHTML += ' ' + matriz[l][c] + ', ';
+    }
+    // texto += '\n';
+p.innerHTML += '<br>'}
+// alert(texto)
+
+var refazer;
+var matriz = [[],[],[]];
+do{
+    var soma = 0;
+    var texto = '';
+for(l = 0; l < 3; l++){
+    for(c = 0; c < 3; c++){
+        matriz[l][c] = Math.floor(Math.random () * (100 - 0 + 1) + 0);
+        texto += matriz[l][c] + ' ';
+    soma += matriz[l][c];
+}
+    texto += '\n';
+}
+alert(texto);
+alert('A soma de todos os numeros é: ' + soma);
+refazer = confirm('Deseja voltar?');
+}while(refazer == true)
+
+
+var refazer;
+var numeros = [[],[],[]];
+var maior =  0;
+
+do{
+    var texto = '';
+for(l = 0; l < 3; l++){
+    for(c = 0; c < 3; c++){
+        numeros[l][c] = Math.floor(Math.random () * (50 - 0 + 1) + 0);
+
+    if( numeros[l][c] >= maior){
+        maior = numeros[l][c];
+    }texto += maior + ' ';
+    
+    }
+     texto += '\n';
+}
+alert(texto)
+refazer = confirm('Deseja voltar?')
+}while(refazer == true)
+
+var refazer;
+
+do{
+var vetor = [];
+var temp;
+for(var i = 0; i > 10; i++){
+    vetor[i] = Math.floor(Math.random () * (10 - 0 + 1) + 0);
+}
+    alert(vetor);
+for(var i = 0; i < vetor.length; i++){
+    for(var j = 0; j < i; j++){
+        if(vetor[i] < vetor[j]){
+            temp = vetor[i];
+            vetor[i] = vetor[j];
+            vetor[j] = temp;
+        }
+    }
+    
+}
+    alert(vetor);
+refazer = confirm('deseja voltar do inicio?')
+}while(refazer == true)
+*/
+
+var letras;
+var matriz = [[],[],[], [], [],];
+for (var i = 0; i > 26; i++){
+letras[i] = 'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'}
+alert(letras)
+    for(l = letras[i]; l > 3; l++){
+        for(c = letras[i]; c < 13; c++){
+    matriz[i][j] = letras[i]
+}
+alert(matriz[i][j])
+}
+
+    </script>    
+</body>
+</html>
