@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade Natação</title>
+</head>
+<body>
+    <script>
+var texto = ''
+function gerarTempo(e, qtd){
+    for(var i = 0; i < qtd; i++){
+        var num = Math.floor(Math.random () * (60 - 20 + 1)) + 20;
+        e[1][i] = parseInt(num);
+    }
+    return e;
+    
+}
+
+        var eliminatoria = [['Ana','Edu','Gabi','João','Duda','Didi','Juju','Jota','Bruna','Maju','Fafa','Caca','Rosa','Vivi','Zeze','Julia'],[]]
+        eliminatoria = gerarTempo(eliminatoria, 16);
+        // alert(eliminatoria);
+        // vai transformar linhas em colunas convertendo 2x16 em 16x2 
+        eliminatoria = eliminatoria[0].map((_, c) => eliminatoria.map (l => l[c]));
+        // alert(eliminatoria);
+        // ordena com base na coluna 1
+        eliminatoria.sort((a,b) => a[1] - b[1]);
+        alert(eliminatoria);
+        // .sort usado para ordenação
+
+    var final = [[],[],[],[],[],[],[],[]]
+        for(var i = 0; i < 8; i++){
+            final[i][0] = eliminatoria[i][0];
+        }
+    for(var i = 0; i < 8; i++){
+        var num = Math.floor(Math.random () * (60 - 20 + 1)) + 20;
+        final[i][1] = parseInt(num);
+    }
+    alert(final);
+        final.sort((a, b) => a[1] - b[1]);
+        alert('Ouro: ' + final[0][0] + '\nPrata: ' + final[1][0] + '\nBronze: ' + final[2][0]);
+        
+
+    </script>
+</body>
+</html>
